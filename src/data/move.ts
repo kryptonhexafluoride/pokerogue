@@ -5903,8 +5903,8 @@ export function initMoves() {
       .soundBased()
       .target(MoveTarget.ALL_NEAR_OTHERS),
     new StatusMove(Moves.FAIRY_LOCK, Type.FAIRY, -1, 10, -1, 0, 6)
-      .target(MoveTarget.BOTH_SIDES)
-      .unimplemented(),
+      .target(MoveTarget.ALL)
+      .attr(AddBattlerTagAttr, BattlerTagType.TRAPPED, false, true, 1),
     new SelfStatusMove(Moves.KINGS_SHIELD, Type.STEEL, -1, 10, -1, 4, 6)
       .attr(ProtectAttr, BattlerTagType.KINGS_SHIELD),
     new StatusMove(Moves.PLAY_NICE, Type.NORMAL, -1, 20, 100, 0, 6)
